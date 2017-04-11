@@ -2,7 +2,7 @@
 	</body>
 		<%-- Página em JSP --%>
 	    <%
-	    	String mensagem = "Bem vindo!!";
+	    	String mensagem = "Bem vindo!";
 	    	out.println(mensagem);
 	    %>
 	    <br />
@@ -10,5 +10,8 @@
 	    <%= desenvolvido %>
 	    <br />    
 	    <%	System.out.println("Tudo foi executado!"); %>
+	    <br />
+	    <br />
+	    <a href="listagem.jsp">Listar Visitantes</a>
 	</body>
 </html>
