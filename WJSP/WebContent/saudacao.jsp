@@ -13,5 +13,7 @@
 	    <br />
 	    <br />
 	    <a href="listagem.jsp">Listar Visitantes</a>
+	    <br>
+	    <a href="informar-dados.jsp">Informar Dados através de Expression Language</a>
 	</body>
 </html>
