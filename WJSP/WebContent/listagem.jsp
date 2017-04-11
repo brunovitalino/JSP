@@ -4,28 +4,42 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Brincando com jsf</title>
+		<link rel="stylesheet" type="text/css" href="WEB-INF/lib/bootstrap/bootstrap.css">
+		<style type="text/css">
+			.jumbotron {
+				width: 600px;
+				text-align: center;
+				margin-top: 5px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.table {
+				margin-bottom: 5px;
+			}
+		</style>
 	</head>
 	<body >
-		<%
-		out.print("Listando visitantes:");
-		%>
-		<br>
-		<table class="table table-striped">
-			<tr>
-				<th>Nome</th>
-				<th>Telefone</th>
-			</tr>
+		<div class="jumbotron">			
 			<%
-			for (VisitanteDao visitante: new VisitanteDao().listar())
-			{
+			out.print("Listando visitantes:");
 			%>
+			<table class="table table-striped">
 				<tr>
-					<td><%=visitante.getNome()%></td>
-					<td><%=visitante.getTelefone()%></td>
+					<th>Nome</th>
+					<th>Telefone</th>
 				</tr>
-			<%
-			}
-			%>
-		</table>
+				<%
+				for (VisitanteDao visitante: new VisitanteDao().listar())
+				{
+				%>
+					<tr>
+						<td><%=visitante.getNome()%></td>
+						<td><%=visitante.getTelefone()%></td>
+					</tr>
+				<%
+				}
+				%>
+			</table>
+		</div>
 	</body>
 </html>
